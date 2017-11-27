@@ -11,5 +11,11 @@
     listId="exclude"
     options=model.exclusionOptions
   }}
+  {{gdal-config-options
+      include=include
+      exclude=exclude
+      remove=(action "unsetOption")
+  }}
+  {{copy-button}}
   {{outlet}}
 </div>

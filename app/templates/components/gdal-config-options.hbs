@@ -1,0 +1,18 @@
+# cd to gdal directory
+./configure {{#each include as |included|~}}\
+{{gdal-config-option
+  option=included
+  isExcluded=false
+  removeSelf=(action "remove")
+  action=(action "remove")
+}}
+{{~/each~}} {{#each exclude as |excluded|~}}\
+{{gdal-config-option
+  option=excluded
+  isExcluded=true
+  removeSelf=(action "remove")
+}}
+{{~/each}}
+
+make
+sudo make install
