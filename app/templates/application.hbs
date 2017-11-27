@@ -1,5 +1,15 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="container" >
+  {{generic-selector
+    onSelect=(action "includeOption")
+    placeholder="add option"
+    listId="include"
+    options=model.inclusionOptions
+  }}
+  {{generic-selector
+    onSelect=(action "excludeOption")
+    placeholder="remove option"
+    listId="exclude"
+    options=model.exclusionOptions
+  }}
+  {{outlet}}
+</div>
