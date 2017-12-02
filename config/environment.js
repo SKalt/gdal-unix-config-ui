@@ -3,7 +3,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'gdal-unix-config-ui',
+    modulePrefix: 'unix-gdal-helper',
     environment,
     rootURL: '/',
     locationType: 'auto',
