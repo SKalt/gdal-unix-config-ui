@@ -5,7 +5,7 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'unix-gdal-helper',
     environment,
-    rootURL: '/',
+    rootURL: './',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -46,6 +46,7 @@ module.exports = function(environment) {
   if (environment === 'production') {
     // here you can enable a production-specific feature
     ENV.locationType = 'hash';
+    ENV.rootURL = '/gdal-unix-config-ui/'
   }
 
   return ENV;
